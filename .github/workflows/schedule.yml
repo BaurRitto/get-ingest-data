@@ -20,4 +20,4 @@ jobs:
         # If you have any dependencies, install them here
         # pip install requests
     - name: Run the script
-      run: python task.py
+      run: python python-file.py
