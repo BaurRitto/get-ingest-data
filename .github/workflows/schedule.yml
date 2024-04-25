@@ -1,0 +1,23 @@
+name: Scheduled Python Script
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Runs every day at 8:00 AM UTC
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # If you have any dependencies, install them here
+        # pip install requests
+    - name: Run the script
+      run: python task.py
