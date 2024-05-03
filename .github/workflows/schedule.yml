@@ -15,6 +15,7 @@ jobs:
         PG_URL: ${{ PG_URL }}
         PG_USER: ${{ PG_USER }}
         PG_PASSWORD: ${{ PG_PASSWORD }}
+      run: echo "done"
     - name: Set up Python 3.x
       uses: actions/setup-python@v2
       with:
