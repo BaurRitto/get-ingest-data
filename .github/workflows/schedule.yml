@@ -10,6 +10,11 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
+    - name: Get envs
+      env: 
+        PG_URL: ${{ PG_URL }}
+        PG_USER: ${{ PG_USER }}
+        PG_PASSWORD: ${{ PG_PASSWORD }}
     - name: Set up Python 3.x
       uses: actions/setup-python@v2
       with:
