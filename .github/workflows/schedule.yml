@@ -8,9 +8,9 @@ jobs:
   run-python-script:
     runs-on: ubuntu-latest
     env: 
-      PG_URL: ${{ PG_URL }}
-      PG_USER: ${{ PG_USER }}
-      PG_PASSWORD: ${{ PG_PASSWORD }}
+      PG_URL: ${{ secrets.PG_URL }}
+      PG_USER: ${{ secrets.PG_USER }}
+      PG_PASSWORD: ${{ secrets.PG_PASSWORD }}
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
