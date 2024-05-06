@@ -48,13 +48,9 @@ def show_all_tables(cursor):
         print("Error while fetching table names from PostgreSQL:", error)
 
 def main():
-    # print(f"Current date and time: {datetime.datetime.now()}")
     conn, cursor = connect_to_postgresql(os.getenv('PG_URL'),os.getenv('PG_DB'),os.getenv('PG_USER'), os.getenv('PG_PASSWORD'))
     show_all_tables(cursor)
     
 
 if __name__ == "__main__":
     main()
-
-    # print(os.getenv('PG_USER'))
-    # print(os.getenv('PG_DB'))
